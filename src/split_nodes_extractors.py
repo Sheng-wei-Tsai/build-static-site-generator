@@ -19,11 +19,11 @@ def split_nodes_images(old_nodes):
       new_nodes.append(node)
       continue
     remaining_text = node.text
-    for alt_text, url in images:
-      sections = remaining_text.split(f"![{alt_text}]({url})", 1)
+    for alt, url in images:
+      sections = remaining_text.split(f"![{alt}]({url})", 1)
       if sections[0]:
         new_nodes.append(TextNode(sections[0], TextType.NORMAL))
-      new_nodes.append(TextNode(alt_text, TextType.IMAGE, url))
+      new_nodes.append(TextNode(alt, TextType.IMAGE, url))
       remaining_text = sections[1]
 
     if remaining_text:

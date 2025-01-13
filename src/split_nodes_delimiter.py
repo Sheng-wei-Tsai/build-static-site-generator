@@ -22,9 +22,9 @@ def split_nodes_delimiter(old_nodes, delimiter, text_type):
       continue
 
     # split the node's text by the delimiter
-    parts = node.value.split(delimiter)
+    parts = node.text.split(delimiter)
     if len(parts) % 2 == 0:
-      raise ValueError(f"Unmatched delimiter '{delimiter} in text: {node.value}'")
+      raise ValueError(f"Unmatched delimiter '{delimiter} in text: {node.text}'")
     for i, part in enumerate(parts):
       if i % 2 == 0:
         # Even indices are plain text
