@@ -1,6 +1,6 @@
 from blocktype import BlockType
 from markdown_to_blocks import block_to_block_type, markdown_to_blocks
-from htmlnode import HTMLNode, LeafNode, ParentNode, text_node_to_html_node
+from htmlnode import HTMLNode, text_node_to_html_node
 from text_to_textnodes import text_to_textnodes
 from textnode import TextNode
 
